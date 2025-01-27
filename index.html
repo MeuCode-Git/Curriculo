@@ -1,212 +1,123 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo - Gerardo Manuel Funes</title>
     <style>
-        /* Estilo do botão de impressão */
-        .print-btn {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            background-color: #0073e6;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            text-align: center;
-        }
-
-        .print-btn:hover {
-            background-color: #005bb5;
-        }
-
-        /* Reset básico e estilo do currículo */
-        * {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
+            background-color: #f4f4f9;
             color: #333;
-            background-color: #f4f4f9;
-            padding: 20px;
         }
-
         .container {
-            max-width: 900px;
-            margin: auto;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
             background: #fff;
-            border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+            border-radius: 8px;
         }
-
-        /* Cabeçalho e demais seções */
-        header {
-            background-color: #0073e6;
-            color: #fff;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        header .photo {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 3px solid #fff;
-            object-fit: cover;
-        }
-
-        header .info {
-            flex: 1;
-            margin-left: 20px;
-        }
-
-        header h1 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            margin-bottom: 5px;
-            font-size: 1rem;
-        }
-
-        section {
-            padding: 20px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        section:last-child {
-            border-bottom: none;
-        }
-
-        h2 {
-            color: #0073e6;
-            margin-bottom: 10px;
-            font-size: 1.5rem;
-            border-bottom: 2px solid #0073e6;
-            display: inline-block;
-        }
-
-        ul {
-            list-style-type: none;
-            padding-left: 20px;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        ul li::before {
-            content: "•";
-            color: #0073e6;
-            margin-right: 10px;
-        }
-
-        footer {
+        .header {
             text-align: center;
-            padding: 20px;
-            background-color: #f4f4f9;
+            margin-bottom: 20px;
+        }
+        .header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #4caf50;
+        }
+        .header h1 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+        .header p {
+            font-size: 16px;
             color: #777;
-            font-size: 0.9rem;
         }
-
-        a {
-            color: #0073e6;
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            font-size: 20px;
+            color: #4caf50;
+            border-bottom: 2px solid #4caf50;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin-bottom: 8px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            margin-top: 20px;
+        }
+        .print-button {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background: #4caf50;
+            color: #fff;
+            text-align: center;
             text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
         }
-
-        a:hover {
-            text-decoration: underline;
+        .print-button:hover {
+            background: #45a049;
         }
     </style>
 </head>
 <body>
-    <!-- Botão para imprimir o currículo -->
-    <button class="print-btn" onclick="window.print()">Salvar/Imprimir em PDF</button>
-
     <div class="container">
-        <!-- Cabeçalho -->
-        <header>
-            <img src="sua-foto.jpg" alt="Foto de Gerardo Manuel Funes" class="photo">
-            <div class="info">
-                <h1>Gerardo Manuel Funes</h1>
-                <p><strong>Contato:</strong> +55 37 980 55226</p>
-                <p><strong>E-mail:</strong> <a href="mailto:gerfunesarg@gmail.com">gerfunesarg@gmail.com</a></p>
-            </div>
-        </header>
-        <!-- Objetivo -->
-        <section>
+        <div class="header">
+            <img src="foto.jpg" alt="Foto de Gerardo Manuel Funes">
+            <h1>Gerardo Manuel Funes</h1>
+            <p>33 anos | Santa Rosa, La Pampa, Argentina</p>
+            <p>Contato: gerfunesarg@gmail.com | +5522998883449</p>
+        </div>
+        <div class="section">
             <h2>Objetivo</h2>
-            <p>Procurar emprego em lojas de reparo de celulares, utilizando habilidades e experiência para diagnosticar e consertar dispositivos de forma eficiente, além de criar conteúdo para redes sociais.</p>
-        </section>
-        <!-- Experiência Profissional -->
-        <section>
+            <p>Busco uma posição que permita utilizar minhas diversas habilidades e experiências para contribuir de forma significativa para a comunidade.</p>
+        </div>
+        <div class="section">
             <h2>Experiência Profissional</h2>
-            <h3>Proprietário - Loja de Conserto de Celulares</h3>
-            <p><em>[Nome da Loja]</em> | [Data de Início] – [Data de Término]</p>
             <ul>
-                <li>Diagnosticava e reparava celulares de forma rápida e eficiente.</li>
-                <li>Gerenciava equipe técnica e supervisionava processos de reparo.</li>
-                <li>Estabeleceu relações com fornecedores e administrava o estoque.</li>
+                <li><strong>Motorista:</strong> Habilitação argentina em processo de convalidação no Brasil. Experiência com carros automáticos e manuais.</li>
+                <li><strong>Oficina Mecânica:</strong> Um ano de experiência.</li>
+                <li><strong>Guarda Noturno:</strong> Trabalho em hotéis de 16 a 19 anos.</li>
+                <li><strong>Recepcionista:</strong> Experiência em vários hotéis.</li>
+                <li><strong>Garçom:</strong> Curso de um ano, especializado em vendas.</li>
+                <li><strong>Hortifruti e Repositor:</strong> Experiência em supermercados na Argentina e no Brasil.</li>
+                <li><strong>Serviços de Limpeza:</strong> Trabalho em supermercados.</li>
+                <li><strong>Técnico em Celulares:</strong> Suporte técnico e consertos no Rio de Janeiro.</li>
             </ul>
-            <h3>Técnico de Conserto de Celulares</h3>
-            <p><em>[Nome da Empresa]</em> | [Data de Início] – [Data de Término]</p>
+        </div>
+        <div class="section">
+            <h2>Formação e Habilidades</h2>
             <ul>
-                <li>Realizava diagnóstico e conserto de celulares de diferentes marcas e modelos.</li>
-                <li>Atuava em equipe para resolver problemas técnicos complexos.</li>
+                <li><strong>Idiomas:</strong> Espanhol (nativo), Português, Inglês.</li>
+                <li><strong>Informática:</strong> Criação de sites, campanhas de publicidade, uso avançado de redes sociais.</li>
+                <li><strong>Aulas Particulares:</strong> Ensino de Espanhol no Brasil.</li>
             </ul>
-            <h3>Criador de Conteúdo para Redes Sociais</h3>
-            <p><em>[Nome da Empresa ou Projeto]</em> | [Data de Início] – [Data de Término]</p>
-            <ul>
-                <li>Desenvolveu e publicou conteúdo para plataformas como Instagram.</li>
-                <li>Gerenciou campanhas e aumentou a interação com a audiência nas redes sociais.</li>
-            </ul>
-        </section>
-        <!-- Habilidades -->
-        <section>
-            <h2>Habilidades</h2>
-            <ul>
-                <li>Diagnóstico rápido e eficiente de problemas em celulares.</li>
-                <li>Reparo de celulares de várias marcas e modelos.</li>
-                <li>Gestão de equipes e supervisão de processos técnicos.</li>
-                <li>Comunicação eficaz com clientes e fornecedores.</li>
-                <li>Criação e gerenciamento de conteúdo para redes sociais.</li>
-                <li>Publicidade e marketing digital focados em redes sociais.</li>
-                <li>Adaptabilidade e aprendizado rápido de novas tecnologias.</li>
-            </ul>
-        </section>
-        <!-- Linguagens -->
-        <section>
-            <h2>Linguagens</h2>
-            <ul>
-                <li>Espanhol (nativo)</li>
-                <li>Português (fluente)</li>
-            </ul>
-        </section>
-        <!-- Formação Acadêmica -->
-        <section>
-            <h2>Formação Acadêmica</h2>
-            <p>[Insira informações sobre formação, se aplicável]</p>
-        </section>
-        <!-- Referências -->
-        <section>
-            <h2>Referências</h2>
-            <p>[Insira contatos de pessoas que possam atestar suas qualificações]</p>
-        </section>
-        <!-- Rodapé -->
-        <footer>
-            <p>Currículo atualizado | Gerardo Manuel Funes</p>
-        </footer>
+        </div>
+        <div class="footer">
+            <p>© 2025 Gerardo Manuel Funes. Todos os direitos reservados.</p>
+        </div>
+        <a href="#" class="print-button" onclick="window.print()">Salvar como PDF</a>
     </div>
 </body>
 </html>
