@@ -3,120 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Currículo de Gerardo Manuel Funes - Profissional multidisciplinar com experiência em diversas áreas.">
+    <meta name="author" content="Gerardo Manuel Funes">
     <title>Currículo - Gerardo Manuel Funes</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #4caf50;
+            --secondary-color: #45a049;
+            --background-color: #f4f4f9;
+            --text-color: #333;
+            --muted-color: #777;
+            --font-family: 'Poppins', sans-serif;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: var(--font-family);
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
         }
+
         .container {
             max-width: 800px;
             margin: 20px auto;
-            padding: 20px;
+            padding: 30px;
             background: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
         }
-        .header {
+
+        header {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
-        .header img {
+
+        header img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #4caf50;
+            border: 4px solid var(--primary-color);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .header h1 {
-            margin: 10px 0;
+
+        header h1 {
+            margin: 15px 0 10px;
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        header p {
+            font-size: 16px;
+            color: var(--muted-color);
+            margin: 5px 0;
+        }
+
+        address {
+            font-style: normal;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        address a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        address a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        section h2 i {
+            margin-right: 10px;
             font-size: 24px;
         }
-        .header p {
-            font-size: 16px;
-            color: #777;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        .section h2 {
-            font-size: 20px;
-            color: #4caf50;
-            border-bottom: 2px solid #4caf50;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
-        .section ul {
+
+        section ul {
             list-style: none;
             padding: 0;
         }
-        .section ul li {
-            margin-bottom: 8px;
+
+        section ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
         }
-        .footer {
+
+        section ul li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-size: 18px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        footer {
             text-align: center;
             font-size: 14px;
-            color: #777;
-            margin-top: 20px;
+            color: var(--muted-color);
+            margin-top: 30px;
         }
+
         .print-button {
             display: block;
             width: 100%;
             max-width: 200px;
-            margin: 20px auto;
-            padding: 10px;
-            background: #4caf50;
+            margin: 30px auto;
+            padding: 12px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: #fff;
             text-align: center;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
             font-size: 16px;
+            font-weight: 600;
             cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
+
         .print-button:hover {
-            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        @media print {
+            body {
+                background-color: #fff;
+                color: #000;
+            }
+
+            .print-button {
+                display: none;
+            }
+
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
         }
     </style>
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <div class="header">
+        <header>
             <img src="foto.jpg" alt="Foto de Gerardo Manuel Funes">
             <h1>Gerardo Manuel Funes</h1>
             <p>33 anos | Santa Rosa, La Pampa, Argentina</p>
-            <p>Contato: gerfunesarg@gmail.com | +5522998883449</p>
-        </div>
-        <div class="section">
-            <h2>Objetivo</h2>
-            <p>Busco uma posição que permita utilizar minhas diversas habilidades e experiências para contribuir de forma significativa para a comunidade.</p>
-        </div>
-        <div class="section">
-            <h2>Experiência Profissional</h2>
-            <ul>
-                <li><strong>Motorista:</strong> Habilitação argentina em processo de convalidação no Brasil. Experiência com carros automáticos e manuais.</li>
-                <li><strong>Oficina Mecânica:</strong> Um ano de experiência.</li>
-                <li><strong>Guarda Noturno:</strong> Trabalho em hotéis de 16 a 19 anos.</li>
-                <li><strong>Recepcionista:</strong> Experiência em vários hotéis.</li>
-                <li><strong>Garçom:</strong> Curso de um ano, especializado em vendas.</li>
-                <li><strong>Hortifruti e Repositor:</strong> Experiência em supermercados na Argentina e no Brasil.</li>
-                <li><strong>Serviços de Limpeza:</strong> Trabalho em supermercados.</li>
-                <li><strong>Técnico em Celulares:</strong> Suporte técnico e consertos no Rio de Janeiro.</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2>Formação e Habilidades</h2>
-            <ul>
-                <li><strong>Idiomas:</strong> Espanhol (nativo), Português, Inglês.</li>
-                <li><strong>Informática:</strong> Criação de sites, campanhas de publicidade, uso avançado de redes sociais.</li>
-                <li><strong>Aulas Particulares:</strong> Ensino de Espanhol no Brasil.</li>
-            </ul>
-        </div>
-        <div class="footer">
+            <address>
+                Contato: <a href="mailto:gerfunesarg@gmail.com">gerfunesarg@gmail.com</a> | +5522998883449
+            </address>
+        </header>
+        <main>
+            <section>
+                <h2><i class="fas fa-bullseye"></i> Objetivo</h2>
+                <p>Busco uma posição que permita utilizar minhas diversas habilidades e experiências para contribuir de forma significativa para a comunidade.</p>
+            </section>
+            <section>
+                <h2><i class="fas fa-briefcase"></i> Experiência Profissional</h2>
+                <ul>
+                    <li><strong>Motorista:</strong> Habilitação argentina em processo de convalidação no Brasil. Experiência com carros automáticos e manuais.</li>
+                    <li><strong>Oficina Mecânica:</strong> Um ano de experiência.</li>
+                    <li><strong>Guarda Noturno:</strong> Trabalho em hotéis de 16 a 19 anos.</li>
+                    <li><strong>Recepcionista:</strong> Experiência em vários hotéis.</li>
+                    <li><strong>Garçom:</strong> Curso de um ano, especializado em vendas.</li>
+                    <li><strong>Hortifruti e Repositor:</strong> Experiência em supermercados na Argentina e no Brasil.</li>
+                    <li><strong>Serviços de Limpeza:</strong> Trabalho em supermercados.</li>
+                    <li><strong>Técnico em Celulares:</strong> Suporte técnico e consertos no Rio de Janeiro.</li>
+                </ul>
+            </section>
+            <section>
+                <h2><i class="fas fa-graduation-cap"></i> Formação e Habilidades</h2>
+                <ul>
+                    <li><strong>Idiomas:</strong> Espanhol (nativo), Português, Inglês.</li>
+                    <li><strong>Informática:</strong> Criação de sites, campanhas de publicidade, uso avançado de redes sociais.</li>
+                    <li><strong>Aulas Particulares:</strong> Ensino de Espanhol no Brasil.</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
             <p>© 2025 Gerardo Manuel Funes. Todos os direitos reservados.</p>
-        </div>
+        </footer>
         <a href="#" class="print-button" onclick="window.print()">Salvar como PDF</a>
     </div>
 </body>
