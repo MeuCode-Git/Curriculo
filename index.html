@@ -25,6 +25,7 @@
             background-color: var(--background-color);
             color: var(--text-color);
             line-height: 1.6;
+            transition: background-color 0.5s ease;
         }
 
         .container {
@@ -162,11 +163,24 @@
                 border-radius: 0;
             }
         }
+
+        /* Barra de progreso */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            background: var(--primary-color);
+            width: 0%;
+            z-index: 1000;
+            transition: width 0.3s ease;
+        }
     </style>
     <!-- Iconos de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <div class="progress-bar"></div>
     <div class="container">
         <header>
             <img src="foto.jpg" alt="Foto de Gerardo Manuel Funes">
@@ -208,5 +222,24 @@
         </footer>
         <a href="#" class="print-button" onclick="window.print()">Salvar como PDF</a>
     </div>
+
+    <script>
+        // Cambiar el color de fondo del body según el desplazamiento
+        const body = document.body;
+        const progressBar = document.querySelector('.progress-bar');
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercentage = (scrollY / totalHeight) * 100;
+
+            // Cambiar el color de fondo del body
+            const hue = (scrollPercentage * 3.6); // Convertir porcentaje a grados (0-360)
+            body.style.backgroundColor = `hsl(${hue}, 50%, 90%)`;
+
+            // Actualizar la barra de progreso
+            progressBar.style.width = `${scrollPercentage}%`;
+        });
+    </script>
 </body>
 </html>
